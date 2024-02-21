@@ -47,7 +47,18 @@ Voice GPT is a FastAPI service that provides audio-to-text and text-to-speech fu
     ```bash
     pip install -r requirements.txt
     ```
-
+6. Environment variables:
+    - Change .example.env to .env
+    - Change the api keys to use your own api keys.
+    ```
+        OPEN_AI_API_KEY=example_api_key
+        OPEN_AI_ORG=org-example_org_key
+        ELEVEN_LABS_API_KEY=example_eleven_labs_key
+    ```
+    - Organization key is not mandatory, but if you want to use it instead of the api key
+    usage uncomment the
+    ´´´organization=config("OPEN_AI_ORG")´´´
+    on functions/openai_requests.py on line 6
 ## Usage
 
 1. Start the FastAPI server:
@@ -59,7 +70,7 @@ Voice GPT is a FastAPI service that provides audio-to-text and text-to-speech fu
 2. Access the API endpoints:
 
     - Audio to Text: POST /post-audio
-    - Text to Speech: [Add relevant endpoint]
+    - Reset conversation: GET /reset
 
 3. Use the provided API endpoints in your frontend application to interact with the Voice GPT service.
 
@@ -80,7 +91,6 @@ This endpoint handles audio input, converts it to text, generates a response, an
 - If successful, returns the generated audio response.
 - If there's an error, returns an appropriate HTTP status code and error message.
 
-### [Add more endpoints if applicable]
 
 ## Resetting Conversation
 
@@ -99,10 +109,6 @@ This endpoint resets the conversation, clearing any stored messages.
 
 ## Contributors
 
-- [Your Name or Username]
-
-Feel free to add yourself as a contributor if you've made contributions to the project.
+- NikoJT
 
 ## License
-
-[Add license information here, if applicable]

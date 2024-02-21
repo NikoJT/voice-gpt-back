@@ -57,7 +57,8 @@ Voice GPT is a FastAPI service that provides audio-to-text and text-to-speech fu
     ```
     - Organization key is not mandatory, but if you want to use it instead of the api key
     usage uncomment the
-    ´´´organization=config("OPEN_AI_ORG")´´´
+    
+    ### ´´´organization=config("OPEN_AI_ORG")´´´
     on functions/openai_requests.py on line 6
 ## Usage
 
